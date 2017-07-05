@@ -1,0 +1,14 @@
+@import "./variables.scss";
+@import "./reset.scss";
+
+:global {
+
+	body {
+		strong {
+			font-weight: bold;
+		}
+
+		font-family: Helvetica;
+		color: #333;
+	}
+}

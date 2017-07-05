@@ -1,0 +1,24 @@
+:global {
+  .characters {
+    margin-top: 20px;
+    
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      cursor: pointer;
+
+      &--head {
+        cursor: default;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+    }
+
+    &__property {
+      margin-right: 10px;
+      flex: 1;
+      min-width: 100px;
+    }
+  }
+}

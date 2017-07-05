@@ -1,0 +1,32 @@
+@import '../../styles/variables.scss';
+
+:global {
+  .app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .button {
+    display: inline;
+    cursor: pointer;
+    color: $color__green;
+    font-weight: bold;
+    text-decoration: underline;
+
+    &--red {
+      color: $color__red;
+    }
+  }
+
+  input, select {
+    height: 20px;
+    width: 200px;
+  }
+
+  .error {
+    color: $color__red;
+    padding: 10px 0;
+  }
+}
