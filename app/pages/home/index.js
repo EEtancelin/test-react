@@ -13,19 +13,13 @@ const Home = ({ characters, properties, actions }) => (
     <Navbar/>
     <div className="wrapper">
     <div className="characters">
+      <div className="characters__item">
+        <div className='character-list'>
       {characters.map((character, i) => (
-        <div key={i} className="characters__item">
-          <div className='character-list'>
-            <CharacterCard character={character} id={i} action={actions}/>
-            <CharacterCard character={character} id={i} action={actions}/>
-            <CharacterCard character={character} id={i} action={actions}/>
-            <CharacterCard character={character} id={i} action={actions}/>
-            <CharacterCard character={character} id={i} action={actions}/>
-            <CharacterCard character={character} id={i} action={actions}/>
-            <CharacterCard character={character} id={i} action={actions}/>
-            </div>
-        </div>
+        <CharacterCard character={character} id={i} action={actions}/>
       ))}
+    </div>
+  </div>
     </div>
     </div>
   </div>

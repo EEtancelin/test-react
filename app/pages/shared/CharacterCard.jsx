@@ -9,30 +9,30 @@ import CharacterCardProperties from './CharacterCardProperties.jsx';
 import '../home/home.scss';
 
 const CharacterCard = ({ character, id , actions }) => (
-      <div className="characterCard">
-      <div className="character-body">
-        <div className='character-name'>
-          {console.log(character)}
-          {character.lastName + " " +character.firstName}
+  <div className="characterCard equalHW">
+    <div className="character-body">
+      <div className='character-name'>
+        {console.log(character)}
+        {character.lastName + " " +character.firstName}
+      </div>
+      <CharacterType type={character.type}/>
+      <div className='properties'>
+          {Object.keys(character).map( function(s){
+            if ( s !=='firstName' && s !=='lastName' && s !=='type') {
+              return <CharacterCardProperties property={s} value={character[s]} />
+            }
+          })}
+      </div>
+      <div className='footer'>
+        <div className='footer-item'>
+          <div className="characters__property button" onClick={() => browserHistory.push(`/character/${id}`)}>Edit</div>
         </div>
-        <CharacterType type={character.type}/>
-        <div className='properties'>
-            {Object.keys(character).map( function(s){
-              if ( s !=='firstName' && s !=='lastName' && s !=='type') {
-                return <CharacterCardProperties property={s} value={character[s]} />
-              }
-            })}
-        </div>
-          <div className='footer'>
-            <div className='footer-item'>
-              <div className="characters__property button" onClick={() => browserHistory.push(`/character/${id}`)}>Edit</div>
-            </div>
-            <div className='footer-item'>
-              <div className="characters__property button button--red" onClick={() => actions.deleteCharacterAction(id)}>Delete</div>
-            </div>
-          </div>
+        <div className='footer-item'>
+          <div className="characters__property button button--red" onClick={() => actions.deleteCharacterAction(id)}>Delete</div>
         </div>
       </div>
+    </div>
+  </div>
 );
 
 const mapStateToProps = state => ({
