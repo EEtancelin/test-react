@@ -3,26 +3,25 @@ import { browserHistory } from 'react-router';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { deleteCharacterAction } from '../../reducers/character';
+import CharacterType from './CharacterType.jsx';
 
 import '../home/home.scss';
 
-const CharacterCard = ({ }) => (
+const CharacterCard = ({ character }) => (
       <div className="character">
       <div className="character-body">
         <div className='character-name'>
-          John Doe
+          {console.log(character)}
+          {character.lastName + " " +character.firstName}
         </div>
         <div className='properties'>
-          <div className='property-name'>
-            Plant
-            <img src='https://www.iconexperience.com/_img/g_collection_png/standard/512x512/plant.png'/>
-          </div>
+          <CharacterType type={character.type}/>
           <div className='property'>
             <div className='property-name'>
               Birth:
             </div>
             <div className='property-value'>
-              15/06/2013
+              {character.birthDate}
             </div>
           </div>
                 </div>
