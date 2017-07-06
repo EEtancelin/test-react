@@ -14,7 +14,6 @@ const Navbar = ({}) => (
     <img src="http://www.williammalone.com/articles/create-html5-canvas-javascript-game-character/images/character-color.png" />
   </a>
 
-
   <div className="navbar-wagon-right hidden-xs hidden-sm">
 
     <div className="navbar-wagon-item navbar-wagon-button btn" onClick={() => browserHistory.push(`/character`)}>Add a character</div>
