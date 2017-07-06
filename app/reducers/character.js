@@ -11,6 +11,24 @@ const initialState = {
       firstName: 'Nexus',
       type: 'animal',
       birthDate: '21/11/2015'
+    },
+    {
+      lastName: 'Doe',
+      firstName: 'John',
+      type: 'plant',
+      birthDate: '01/06/2014'
+    },
+    {
+      lastName: 'Etan',
+      firstName: 'Bell',
+      type: 'animal',
+      birthDate: '03/04/1990'
+    },
+    {
+      lastName: 'Bart',
+      firstName: 'Simpson',
+      type: 'human',
+      birthDate: '06/02/2001'
     }
   ],
   properties: [

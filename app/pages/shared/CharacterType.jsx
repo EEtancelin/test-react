@@ -16,6 +16,9 @@ const CharacterType = ({ type }) => (
       {type === 'animal' &&
         <img src='https://image.freepik.com/icones-gratuites/forme-d-39-empreinte-de-patte-animale_318-30445.jpg'/>
       }
+      {type === 'human' &&
+        <img src='http://icons.iconarchive.com/icons/jonathan-rey/simpsons/256/Bart-Simpson-01-icon.png'/>
+      }
     </div>
   </div>
 );

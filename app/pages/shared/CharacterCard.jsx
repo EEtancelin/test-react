@@ -9,7 +9,7 @@ import CharacterCardProperties from './CharacterCardProperties.jsx';
 import '../home/home.scss';
 
 const CharacterCard = ({ character, id , actions }) => (
-  <div className="characterCard equalHW">
+  <div className="equalHW characterCard">
     <div className="character-body">
       <div className='character-name'>
         {console.log(character)}
