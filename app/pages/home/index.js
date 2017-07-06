@@ -20,7 +20,7 @@ const Home = ({ characters, properties, actions }) => (
       </div>
       {characters.map((character, i) => (
         <div key={i} className="characters__item">
-            <CharacterCard character={character}/>
+            <CharacterCard character={character} id={i} action={actions}/>
           {properties.map((property, j) => (
             <div key={j}className="characters__property">{character[property.key]}</div>
           ))}

@@ -4,33 +4,31 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { deleteCharacterAction } from '../../reducers/character';
 import CharacterType from './CharacterType.jsx';
+import CharacterCardProperties from './CharacterCardProperties.jsx';
 
 import '../home/home.scss';
 
-const CharacterCard = ({ character }) => (
-      <div className="character">
+const CharacterCard = ({ character, id , actions }) => (
+      <div className="characterCard">
       <div className="character-body">
         <div className='character-name'>
           {console.log(character)}
           {character.lastName + " " +character.firstName}
         </div>
+        <CharacterType type={character.type}/>
         <div className='properties'>
-          <CharacterType type={character.type}/>
-          <div className='property'>
-            <div className='property-name'>
-              Birth:
-            </div>
-            <div className='property-value'>
-              {character.birthDate}
-            </div>
-          </div>
-                </div>
+            {Object.keys(character).map( function(s){
+              if ( s !=='firstName' && s !=='lastName' && s !=='type') {
+                return <CharacterCardProperties property={s} value={character[s]} />
+              }
+            })}
+        </div>
           <div className='footer'>
             <div className='footer-item'>
-              <div className="characters__property button" onClick={() => browserHistory.push(`/character/${i}`)}>Edit</div>
+              <div className="characters__property button" onClick={() => browserHistory.push(`/character/${id}`)}>Edit</div>
             </div>
             <div className='footer-item'>
-              <div className="characters__property button button--red" onClick={() => actions.deleteCharacterAction(i)}>Delete</div>
+              <div className="characters__property button button--red" onClick={() => actions.deleteCharacterAction(id)}>Delete</div>
             </div>
           </div>
         </div>
@@ -41,6 +39,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
+  actions: bindActionCreators({ deleteCharacterAction }, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CharacterCard);
