@@ -3,19 +3,30 @@ import { browserHistory } from 'react-router';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import CharacterCard from '../shared/CharacterCard.jsx';
+import Navbar from '../shared/Navbar.jsx';
 import { deleteCharacterAction } from '../../reducers/character';
 
 import './home.scss';
 
 const Home = ({ characters, properties, actions }) => (
-  <div className="home">
-    <div className="button" onClick={() => browserHistory.push(`/character`)}>Add a character</div>
+  <div >
+    <Navbar/>
+    <div className="wrapper">
     <div className="characters">
       {characters.map((character, i) => (
         <div key={i} className="characters__item">
+          <div className='character-list'>
             <CharacterCard character={character} id={i} action={actions}/>
+            <CharacterCard character={character} id={i} action={actions}/>
+            <CharacterCard character={character} id={i} action={actions}/>
+            <CharacterCard character={character} id={i} action={actions}/>
+            <CharacterCard character={character} id={i} action={actions}/>
+            <CharacterCard character={character} id={i} action={actions}/>
+            <CharacterCard character={character} id={i} action={actions}/>
+            </div>
         </div>
       ))}
+    </div>
     </div>
   </div>
 );
