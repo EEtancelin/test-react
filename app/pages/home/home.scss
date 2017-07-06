@@ -1,7 +1,7 @@
 :global {
   .characters {
     margin-top: 20px;
-    
+
     &__item {
       display: flex;
       align-items: center;
@@ -20,5 +20,56 @@
       flex: 1;
       min-width: 100px;
     }
+  }
+  .character{
+    width: 200px;
+    height: 130px;
+    background: #FFF;
+    box-shadow: 0 1px 3px 0 #D4D4D5, 0 0 0 1px #D4D4D5;
+    border-radius: .28571429rem;
+    margin-top: 10px;
+    position:relative;
+
+    & .character-body{
+      padding: 14px;
+    }
+    & .category {
+      padding-top: 7px;
+      font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+      font-size: 1em;
+      color: rgba(0,0,0,.68);
+      vertical-align: baseline;
+    }
+
+    & img {
+      margin-left: 6px;
+      width: 25px;
+      height: 25px;
+    }
+
+    & .property {
+      margin-top: 4px;
+      display: inline;
+    }
+    & .property-value {
+      margin-left: 3px;
+      font-size: 0.9em;
+    }
+    & .footer{
+      border-top: solid 1.5px rgba(0,0,0,0.20);
+      position: absolute;
+      bottom: 0;
+      left: 0px;
+      height: 23px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 4px;
+    }
+  }
+  .character-name {
+    font-weight: bold;
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
   }
 }
