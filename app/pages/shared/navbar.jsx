@@ -16,7 +16,7 @@ const Navbar = ({}) => (
 
   <div className="navbar-wagon-right hidden-xs hidden-sm">
 
-    <div className="navbar-wagon-item navbar-wagon-button btn" onClick={() => browserHistory.push(`/character`)}>Add a character</div>
+    <div></div>
   </div>
 </div>
 );

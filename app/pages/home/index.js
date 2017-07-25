@@ -15,9 +15,6 @@ const Home = ({ characters, properties, actions }) => (
     <div className="characters">
       <div className="characters__item">
         <div className='character-list'>
-      {characters.map((character, i) => (
-        <CharacterCard character={character} id={i} action={actions}/>
-      ))}
     </div>
   </div>
     </div>
