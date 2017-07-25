@@ -2,7 +2,6 @@ import React, { PropTypes } from 'react';
 import { browserHistory } from 'react-router';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import CharacterCard from '../shared/CharacterCard.jsx';
 import Navbar from '../shared/Navbar.jsx';
 import { deleteCharacterAction } from '../../reducers/character';
 

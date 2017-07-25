@@ -3,8 +3,6 @@ import { browserHistory } from 'react-router';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { deleteCharacterAction } from '../../reducers/character';
-import CharacterType from './CharacterType.jsx';
-import CharacterCardProperties from './CharacterCardProperties.jsx';
 
 import './navbar.scss';
 
