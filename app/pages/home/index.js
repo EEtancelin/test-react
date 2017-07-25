@@ -3,31 +3,34 @@ import { browserHistory } from 'react-router';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Navbar from '../shared/Navbar.jsx';
+import Table from '../shared/Table.jsx';
 import { deleteCharacterAction } from '../../reducers/character';
 
 import './home.scss';
+
+
+const rHeader = ['name', 'username','email']
+const rUser = [{
+    id: 1,
+    name: "Leanne Graham",
+    username: "Bret",
+    email: "Sincere@april.biz"
+  },
+  {
+    id: 2,
+    name: "Ervin Howell",
+    username: "Antonette",
+    email: "Shanna@melissa.tv"
+  }
+]
 
 const Home = ({ characters, properties, actions }) => (
   <div >
     <Navbar/>
     <div className="wrapper">
-    <div className="characters">
-      <div className="characters__item">
-        <div className='character-list'>
-    </div>
-  </div>
-    </div>
+      <Table header={rHeader} elements={rUser} />
     </div>
   </div>
 );
 
-const mapStateToProps = state => ({
-  characters: state.character.characters,
-  properties: state.character.properties
-});
-
-const mapDispatchToProps = dispatch => ({
-  actions: bindActionCreators({ deleteCharacterAction }, dispatch)
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default Home;

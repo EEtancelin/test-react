@@ -1,0 +1,15 @@
+:global {
+
+  .table-body{
+    margin-top: 5px;
+  }
+  .column-header{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .space-around{
+    display: flex;
+    justify-content: space-around;
+  }
+}
