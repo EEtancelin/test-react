@@ -9,18 +9,21 @@ import './styles/main.scss';
 import routes from './routes';
 
 // Sorry for this raw function do not know why the import doesnt work.
+const URL = "https://jsonplaceholder.typicode.com/users" ;
+
 const getJsonSource = () => {
-  fetch("https://jsonplaceholder.typicode.com/users")
-    .then(function(response) {
-      console.log(response.json())
-    })
-    .catch(function(err) {
-  	   console.log("Unable to download the Url")
-    });
+  fetch(URL).then(
+   function(response){
+     return response.json();
+  }
+);
 }
 
+export default getJsonSource;
+
+
 console.log(getJsonSource);
-getJsonSource();
+console.log(getJsonSource());
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(reducers, composeEnhancers(applyMiddleware(thunk)));
 

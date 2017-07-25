@@ -1,10 +1,6 @@
 import React, { PropTypes } from 'react';
-import { browserHistory } from 'react-router';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import Navbar from '../shared/Navbar.jsx';
 import Table from '../shared/Table.jsx';
-import { deleteCharacterAction } from '../../reducers/character';
 
 import './home.scss';
 
@@ -24,7 +20,7 @@ const rUser = [{
   }
 ]
 
-const Home = ({ characters, properties, actions }) => (
+const Home = ({}) => (
   <div >
     <Navbar/>
     <div className="wrapper">
